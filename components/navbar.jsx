@@ -6,15 +6,15 @@ export default function navbar() {
     <div className="bg-primary w-full p-6 ">
       <div className="container flex justify-between">
         {/* Navbar Name */}
-        <div className="text-tertiary font-semibold text-2xl hover:text-white">
+        <div className="text-white font-semibold text-2xl hover:text-blue-400">
           SAM33R
         </div>
         {/* Navbar Links */}
-        <div className="flex gap-4">
-          <div className="text-tertiary hover:text-white text-xl">Home</div>
-          <div className="text-tertiary hover:text-white text-xl">About Me</div>
-          <div className="text-tertiary hover:text-white text-xl">Projects</div>
-          <div className="text-tertiary hover:text-white text-xl">Contact</div>
+        <div className="flex gap-6">
+          <div className="text-white hover:text-blue-400 text-xl">Home</div>
+          <div className="text-white hover:text-blue-400 text-xl">About Me</div>
+          <div className="text-white hover:text-blue-400 text-xl">Projects</div>
+          <div className="text-white hover:text-blue-400 text-xl">Contact</div>
         </div>
       </div>
     </div>

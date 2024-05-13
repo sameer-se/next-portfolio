@@ -17,9 +17,8 @@ export default function Home() {
             Sameer Khadka
           </div>
           <div className="text-white break-normal font-medium text-lg pt-2">
-            I am FULL STACK DEVELOPER with a passion for creating innovative and
-            efficient digital solutions with experties in JAVASCRIPT, REACT,
-            NEXTJS, EXPRESS, NODEJS & MONGODB.
+            I am FULL STACK DEVELOPER with a passion for creating websites and
+            web app with JAVASCRIPT, REACT, NEXTJS, EXPRESS, NODEJS & MONGODB.
           </div>
           {/* Buttons */}
           <div className="flex gap-6 pt-4">
