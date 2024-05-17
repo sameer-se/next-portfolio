@@ -3,7 +3,7 @@ import React from "react";
 export default function navbar() {
   return (
     // Navbar Container
-    <div className="bg-secondary fixed top-0 left-0 w-full p-6 drop-shadow-xl">
+    <div className="bg-primary fixed top-0 left-0 w-full p-6 drop-shadow-xl">
       <nav className="container flex justify-between">
         {/* Navbar Name */}
         <div className="text-white font-semibold text-2xl hover:text-blue-400">

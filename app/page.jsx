@@ -11,11 +11,11 @@ export default function Home() {
       {/* Body */}
       <div className="container flex justify-between gap-4 m-10 pt-16">
         {/* My Information */}
-        <div className="w-1/2 flex-col space-y-2 justify-between items-center">
-          <div className="text-white font-semibold text-3xl">
+        <div className="w-2/3 h-[450px] flex-col space-y-8">
+          <div className="text-white font-semibold text-3xl pt-10">
             Hello 👀, I am
           </div>
-          <div className="text-white font-semibold text-5xl pt-4">
+          <div className="text-white font-semibold text-7xl pt-4">
             Sameer Khadka
           </div>
           <div className="text-white break-normal font-medium text-lg pt-2">
@@ -33,12 +33,12 @@ export default function Home() {
           </div>
         </div>
         {/* Graphics */}
-        <div className="w-1/2 bg-tertiary rounded-3xl">
+        <div className="w-1/3 h-[450px] bg-tertiary rounded-3xl">
           <Spline scene="https://prod.spline.design/gXdLBMKjyjlGr3Jw/scene.splinecode" />
         </div>
       </div>
       {/* Seperator */}
-      <div className="bg-primary w-full p-10 drop-shadow-xl"></div>
+      <div className="bg-primary w-full p-5 drop-shadow-xl"></div>
       {/* About Me */}
       <div className="container mt-8">
         <div className="text-tertiary font-semibold text-3xl">About me:</div>
