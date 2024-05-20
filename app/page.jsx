@@ -5,6 +5,7 @@ import Navbar from "../components/navbar";
 import Spline from "@splinetool/react-spline";
 import { FaGithub, FaLinkedin, FaCode } from "react-icons/fa";
 import { IoMdCloudDownload } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
 import Link from "next/link";
 
 export default function Home() {
@@ -12,11 +13,11 @@ export default function Home() {
     <>
       <Navbar />
       {/* Body */}
-      <div className="container flex justify-between gap-4 m-10 pt-16">
+      <div className="container flex justify-between gap-4 m-10 pt-16 h-screen">
         {/* My Information */}
-        <div className="w-2/3 h-[450px] flex-col space-y-6">
-          <div className="text-white font-semibold text-3xl pt-10 -mb-8">
-            Hello 👀, I am
+        <div className="w-2/3  flex-col space-y-6">
+          <div className="text-white font-semibold text-3xl pt-24">
+            Hello <span className="">👋🏻 </span>, I am
           </div>
           <div className="text-white font-semibold text-7xl pt-4">
             Sameer Khadka
@@ -42,20 +43,25 @@ export default function Home() {
           </div>
           {/* Icons Links */}
           <div className="flex gap-6 mt-10 pt-8">
-            <div className="text-tertiary text-4xl text-center hover:text-white">
+            <div className="text-white text-4xl text-center">
               <Link href="https://www.linkedin.com/in/sameer-khadka-774757222/">
                 <FaGithub />
               </Link>
             </div>
-            <div className="text-tertiary text-4xl text-center hover:text-white">
+            <div className="text-white text-4xl text-center">
               <Link href="https://github.com/sameer-se">
                 <FaLinkedin />
+              </Link>
+            </div>
+            <div className="text-white text-4xl text-center">
+              <Link href="https://github.com/sameer-se">
+                <MdEmail />
               </Link>
             </div>
           </div>
         </div>
         {/* Graphics */}
-        <div className="w-1/3 h-[450px] bg-tertiary rounded-3xl">
+        <div className="w-1/3 -mt-10 touch-none">
           <Spline scene="https://prod.spline.design/gXdLBMKjyjlGr3Jw/scene.splinecode" />
         </div>
       </div>
@@ -63,7 +69,7 @@ export default function Home() {
       <div className="bg-primary w-full p-5 drop-shadow-xl"></div>
       {/* About Me */}
       <div className="container mt-8">
-        <div className="text-tertiary font-semibold text-3xl">About me:</div>
+        <div className="text-white font-semibold text-3xl">About me:</div>
         <div className="text-white font-medium text-lg break-normal mt-4">
           Hey, I`m SAMEER. I am FULL STACK DEVELOPER with a passion for creating
           innovative and efficient digital solutions with experties in PYTHON,
@@ -75,14 +81,14 @@ export default function Home() {
       </div>
       {/* Experiance */}
       <div className="container mt-6 flex gap-6">
-        <div className="text-tertiary font-semibold text-8xl">2+</div>
+        <div className="text-white font-semibold text-8xl">2+</div>
         <div className="text-white text-2xl font-medium break-normal">
           Years of experience. Specialised in building apps, while ensuring a
           seamless web experience for end users.
         </div>
       </div>
       {/* Skills */}
-      <div className="container text-tertiary font-semibold mt-8 text-3xl">
+      <div className="container text-white font-semibold mt-8 text-3xl">
         Skills:
       </div>
     </>
