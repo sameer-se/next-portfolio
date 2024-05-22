@@ -11,7 +11,7 @@ export default function about() {
       </div>
       {/* About Me */}
       <div className="w-1/2 pt-16">
-        <div className="text-white font-semibold text-8xl">About Me:</div>
+        <div className="text-white font-semibold text-6xl">About Me:</div>
         <div className="text-white text-justify font-medium text-lg break-normal mt-4 pt-4 pb-4">
           Hey, I`m SAMEER. I am FULL STACK DEVELOPER with a passion for creating
           innovative and efficient digital solutions with experties in PYTHON,
@@ -21,7 +21,7 @@ export default function about() {
           challenges.
         </div>
         {/* seperator */}
-        <div className="bg-primary p-1 mt-10 mb-10"></div>
+        <div className="bg-primary p-1 mt-10 mb-10 rounded-md"></div>
         {/* Experiance */}
         <div className="mt-10 flex gap-6 pt-8">
           <div className="text-quaternary font-semibold text-9xl">2+</div>
