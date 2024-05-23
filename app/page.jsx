@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import Navbar from "../components/navbar";
-import About from "@/components/about";
-import Skills from "@/components/skills";
-import Home from "@/components/home";
+import Navbar from "@/app/components/navbar";
+import About from "@/app/components/about";
+import Skills from "@/app/components/skills";
+import Home from "@/app/components/home";
 
 export default function Page() {
   return (
