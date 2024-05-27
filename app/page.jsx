@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
-import Navbar from "@/app/components/navbar";
-import About from "@/app/components/about";
-import Skills from "@/app/components/skills";
-import Home from "@/app/components/home";
+import Navbar from "@/components/navbar";
+import About from "@/components/about";
+import Skills from "@/components/skills";
+import Home from "@/components/home";
+import Footer from "@/components/footer";
 
 export default function Page() {
   return (
@@ -17,6 +18,8 @@ export default function Page() {
       {/* seperator */}
       <div className="bg-primary p-2"></div>
       <Skills />
+      {/* seperator */}
+      <Footer />
     </>
   );
 }
