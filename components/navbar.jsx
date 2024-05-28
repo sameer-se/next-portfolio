@@ -7,15 +7,15 @@ export default function navbar() {
     <div className="bg-primary fixed top-0 w-full p-6 drop-shadow-xl">
       <nav className="container flex justify-between">
         {/* Navbar Name */}
-        <div
+        <Link
           href="/"
           className="text-white font-semibold text-2xl hover:text-blue-400"
         >
           SAM33R
-        </div>
+        </Link>
         {/* Navbar Linknks */}
-        <ul className="flex gap-8">
-          <Link href="/" className="text-white hover:text-tertiary text-xl">
+        <div className="flex gap-8">
+          <Link href="#home" className="text-white hover:text-tertiary text-xl">
             Home
           </Link>
           <Link
@@ -42,7 +42,7 @@ export default function navbar() {
           >
             Contact
           </Link>
-        </ul>
+        </div>
       </nav>
     </div>
   );
