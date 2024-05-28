@@ -4,7 +4,7 @@ import Spline from "@splinetool/react-spline";
 
 export default function about() {
   return (
-    <div className="flex h-screen gap-4 container mt-6">
+    <div id="about" className="flex h-screen gap-4 container mt-6">
       {/* graphics */}
       <div className="w-1/2">
         <Spline scene="https://prod.spline.design/sgKJHbcvxbMLqMEx/scene.splinecode" />

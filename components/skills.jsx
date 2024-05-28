@@ -20,7 +20,7 @@ import { SiExpress, SiMongodb, SiTypescript, SiGnubash } from "react-icons/si";
 
 export default function Skills() {
   return (
-    <div className="container h-screen flex p-6 gap-4">
+    <div id="skills" className="container h-screen flex p-6 gap-4">
       <div className="w-1/2 text-white  font-semibold mt-14">
         <span className="text-6xl mb-3"> SKILLS :</span>
         {/* Icons */}

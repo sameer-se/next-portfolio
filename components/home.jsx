@@ -9,7 +9,10 @@ export default function Home() {
   return (
     <>
       {/* Body */}
-      <div className="container flex justify-between gap-4 m-10 pt-16 h-screen">
+      <div
+        id="home"
+        className="container flex justify-between gap-4 m-10 pt-16 h-screen"
+      >
         {/* My Information */}
         <div className="w-2/3  flex-col space-y-6">
           <div className="text-white font-semibold text-3xl pt-24">

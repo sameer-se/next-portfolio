@@ -1,20 +1,47 @@
+import Link from "next/link";
 import React from "react";
 
 export default function navbar() {
   return (
     // Navbar Container
-    <div className="bg-primary fixed top-0 left-0 w-full p-6 drop-shadow-xl">
+    <div className="bg-primary fixed top-0 w-full p-6 drop-shadow-xl">
       <nav className="container flex justify-between">
         {/* Navbar Name */}
-        <div className="text-white font-semibold text-2xl hover:text-blue-400">
+        <div
+          href="/"
+          className="text-white font-semibold text-2xl hover:text-blue-400"
+        >
           SAM33R
         </div>
-        {/* Navbar Links */}
+        {/* Navbar Linknks */}
         <ul className="flex gap-8">
-          <li className="text-white hover:text-tertiary text-xl">Home</li>
-          <li className="text-white hover:text-tertiary text-xl">About Me</li>
-          <li className="text-white hover:text-tertiary text-xl">Projects</li>
-          <li className="text-white hover:text-tertiary text-xl">Contact</li>
+          <Link href="/" className="text-white hover:text-tertiary text-xl">
+            Home
+          </Link>
+          <Link
+            href="#about"
+            className="text-white hover:text-tertiary text-xl"
+          >
+            About Me
+          </Link>
+          <Link
+            href="#skills"
+            className="text-white hover:text-tertiary text-xl"
+          >
+            Skills
+          </Link>
+          <Link
+            href="#projects"
+            className="text-white hover:text-tertiary text-xl"
+          >
+            Projects
+          </Link>
+          <Link
+            href="#contact"
+            className="text-white hover:text-tertiary text-xl"
+          >
+            Contact
+          </Link>
         </ul>
       </nav>
     </div>
