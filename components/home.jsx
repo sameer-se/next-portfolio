@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaCode } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMdCloudDownload } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
@@ -7,10 +7,7 @@ import Spline from "@splinetool/react-spline";
 
 export default function Home() {
   return (
-    <div
-      id="home"
-      className="container flex justify-between gap-4 m-10 pt-16 h-screen"
-    >
+    <div id="home" className="flex justify-between gap-4 m-10 pt-16 h-screen">
       {/* My Information */}
       <div className="w-2/3  flex-col space-y-6">
         <div className="text-white font-semibold text-3xl pt-24">
@@ -32,27 +29,22 @@ export default function Home() {
             </div>
           </button>
           <button className="text-white border-2 pt-2 pb-2 pr-6 pl-6 border-tertiary rounded-md hover:scale-105 flex items-center gap-2 ">
-            <span>Projects</span>
+            <span>Contact</span>
             <div className="text-xl">
-              <FaCode />
+              <MdEmail />
             </div>
           </button>
         </div>
         {/* Icons Links */}
         <div className="flex gap-6 mt-10 pt-8">
           <div className="text-white text-4xl text-center">
-            <Link href="https://www.linkedin.com/in/sameer-khadka-774757222/">
+            <Link href="https://github.com/sameer-se">
               <FaGithub />
             </Link>
           </div>
           <div className="text-white text-4xl text-center">
-            <Link href="https://github.com/sameer-se">
+            <Link href="https://www.linkedin.com/in/sameer-khadka-774757222/">
               <FaLinkedin />
-            </Link>
-          </div>
-          <div className="text-white text-4xl text-center">
-            <Link href="https://github.com/sameer-se">
-              <MdEmail />
             </Link>
           </div>
         </div>

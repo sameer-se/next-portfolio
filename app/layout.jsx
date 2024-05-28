@@ -1,6 +1,7 @@
 // import { Inter } from "next/font/google";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const poppins = Poppins({
   weight: ["500"],
@@ -17,7 +18,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html className="bg-secondary" lang="en">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        {" "}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
