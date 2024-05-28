@@ -1,5 +1,4 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMdCloudDownload } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import Link from "next/link";
@@ -34,19 +33,6 @@ export default function Home() {
               <MdEmail />
             </div>
           </button>
-        </div>
-        {/* Icons Links */}
-        <div className="flex gap-6 mt-10 pt-8">
-          <div className="text-white text-4xl text-center">
-            <Link href="https://github.com/sameer-se">
-              <FaGithub />
-            </Link>
-          </div>
-          <div className="text-white text-4xl text-center">
-            <Link href="https://www.linkedin.com/in/sameer-khadka-774757222/">
-              <FaLinkedin />
-            </Link>
-          </div>
         </div>
       </div>
       {/* Graphics */}
