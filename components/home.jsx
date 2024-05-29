@@ -1,42 +1,54 @@
 import React from "react";
 import { IoMdCloudDownload } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
-import Link from "next/link";
 import Spline from "@splinetool/react-spline";
-
+import { Button } from "./ui/button";
+import { Outlines } from "@react-three/drei";
+// Home Component
 export default function Home() {
   return (
-    <div id="home" className="flex justify-between gap-4 m-10 pt-16 h-screen">
-      {/* My Information */}
-      <div className="w-2/3  flex-col space-y-6">
-        <div className="text-white font-semibold text-3xl pt-24">
-          Hello <span className="">👋🏻 </span>, I am
+    <div id="home" className="container flex gap-8 justify-between h-screen">
+      <div className="w-2/3 flex flex-col gap-4 justify-evenly pt-10 pb-24">
+        {/* Gretings */}
+        <div className="flex flex-col gap-6">
+          <div className="font-semibold text-3xl">
+            Hello <span>👋🏻 </span>, I am
+          </div>
+          <div className="font-semibold text-7xl">Sameer Khadka</div>
         </div>
-        <div className="text-white font-semibold text-7xl pt-4">
-          Sameer Khadka
-        </div>
-        <div className="text-white text-justify break-normal font-medium text-lg pt-2">
-          I am FULL STACK DEVELOPER with a passion for creating websites and web
-          app with JAVASCRIPT, REACT, NEXTJS, EXPRESS, NODEJS & MONGODB.
+        {/* My Informaton */}
+        <div className="flex flex-col gap-4">
+          <div className="text-justify break-normal font-medium text-xl">
+            I am FULL STACK DEVELOPER with a passion for creating websites and
+            web app with JAVASCRIPT, REACT, NEXTJS, EXPRESS, NODEJS & MONGODB.
+          </div>
+          {/* Experiance */}
+          <div className="flex gap-6">
+            <div className="font-semibold text-teal-400 text-8xl">2+</div>
+            <div className="text-justify text-xl font-medium break-normal mt-4">
+              Years of experience. Specialised in building apps, while ensuring
+              a seamless web experience for end users.
+            </div>
+          </div>
         </div>
         {/* Buttons */}
-        <div className="flex gap-6 pt-4">
-          <button className="text-white bg-tertiary pt-2 pb-2 pl-4 pr-4 border-2 border-transparent rounded-md hover:scale-105 flex items-center gap-2">
+        <div className="flex gap-6">
+          <Button className="flex gap-3">
             <span>Download CV </span>
             <div className="text-xl">
               <IoMdCloudDownload />
             </div>
-          </button>
-          <button className="text-white border-2 pt-2 pb-2 pr-6 pl-6 border-tertiary rounded-md hover:scale-105 flex items-center gap-2 ">
+          </Button>
+          <Button className="flex gap-3 bg-teal-400">
             <span>Contact</span>
             <div className="text-xl">
               <MdEmail />
             </div>
-          </button>
+          </Button>
         </div>
       </div>
       {/* Graphics */}
-      <div className="w-1/3 -mt-10 touch-none">
+      <div className="w-1/3 -mt-52  justify-center">
         <Spline scene="https://prod.spline.design/gXdLBMKjyjlGr3Jw/scene.splinecode" />
       </div>
     </div>

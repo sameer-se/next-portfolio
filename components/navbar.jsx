@@ -13,12 +13,9 @@ export default function navbar() {
           <span>SAM33R</span>
         </Link>
         {/* Navbar Linknks */}
-        <div className="flex gap-8">
+        <div className="flex gap-10">
           <Link href="#home" className="font-semibold text-xl">
             <span>Home</span>
-          </Link>
-          <Link href="#about" className="font-semibold text-xl">
-            <span>About Me</span>
           </Link>
           <Link href="#skills" className="font-semibold text-xl">
             Skills
@@ -31,7 +28,7 @@ export default function navbar() {
           </Link>
         </div>
         {/* Icons Links */}
-        <div className="flex gap-4">
+        <div className="flex gap-6">
           {/* Mode Toggle */}
           <ModeToggle />
           <div className="text-2xl text-center content-center border hover:bg-primary/10 rounded-sm p-1">
