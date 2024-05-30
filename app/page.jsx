@@ -5,16 +5,15 @@ import Navbar from "@/components/navbar";
 import Skills from "@/components/skills";
 import Home from "@/components/home";
 import Footer from "@/components/footer";
+import { Separator } from "@/components/ui/separator";
 
 export default function Page() {
   return (
     <>
       <Navbar />
       <Home />
-      {/* seperator */}
-      <div className="bg-primary p-2"></div>
+      <Separator />
       <Skills />
-      {/* seperator */}
       <Footer />
     </>
   );

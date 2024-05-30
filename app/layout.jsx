@@ -1,10 +1,9 @@
-// import { Inter } from "next/font/google";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const poppins = Poppins({
-  weight: ["500"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",

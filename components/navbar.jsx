@@ -9,21 +9,30 @@ export default function navbar() {
     <nav className="bg-background border-border border-b drop-shadow-md">
       <div className="container pt-4 pb-4 shadow-sm flex justify-between">
         {/* Navbar Name */}
-        <Link href="/" className="font-semibold text-2xl">
+        <Link href="/" className="font-normal hover:text-teal-400 text-2xl">
           <span>SAM33R</span>
         </Link>
         {/* Navbar Linknks */}
         <div className="flex gap-10">
-          <Link href="#home" className="font-semibold text-xl">
+          <Link href="#home" className="font-light hover:text-teal-400 text-xl">
             <span>Home</span>
           </Link>
-          <Link href="#skills" className="font-semibold text-xl">
+          <Link
+            href="#skills"
+            className="font-light hover:text-teal-400 text-xl"
+          >
             Skills
           </Link>
-          <Link href="#projects" className="font-semibold text-xl">
+          <Link
+            href="#projects"
+            className="font-light hover:text-teal-400 text-xl"
+          >
             <span> Projects</span>
           </Link>
-          <Link href="#contact" className="font-semibold text-xl">
+          <Link
+            href="#contact"
+            className="font-light hover:text-teal-400 text-xl"
+          >
             <span>Contact</span>
           </Link>
         </div>
@@ -31,12 +40,12 @@ export default function navbar() {
         <div className="flex gap-6">
           {/* Mode Toggle */}
           <ModeToggle />
-          <div className="text-2xl text-center content-center border hover:bg-primary/10 rounded-sm p-1">
+          <div className="text-2xl text-center content-center border bg-background hover:bg-primary/10 rounded-sm p-1">
             <Link href="https://github.com/sameer-se">
               <FaGithub />
             </Link>
           </div>
-          <div className="text-2xl text-center content-center border hover:bg-primary/10 rounded-sm p-1">
+          <div className="text-2xl text-center content-center border bg-background hover:bg-primary/10 rounded-sm p-1">
             <Link href="https://www.linkedin.com/in/sameer-khadka-774757222/">
               <FaLinkedin />
             </Link>
