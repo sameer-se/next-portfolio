@@ -18,7 +18,7 @@ export default function Home() {
           </div>
         </div>
         {/* My Informaton */}
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 -mt-8">
           <div className="text-justify break-normal font-light text-2xl pr-14">
             FULL STACK DEVELOPER with a passion for creating websites and web
             app with JAVASCRIPT, REACT, NEXTJS, EXPRESS, NODEJS & MONGODB.
@@ -35,8 +35,8 @@ export default function Home() {
         {/* Buttons */}
         <div className="flex gap-6">
           <Button className="flex gap-3 w-1/5 p-6">
-            <span className="font-normal text-lg">Download CV </span>
-            <div className="text-xl">
+            <span className="font-medium text-lg">Download CV </span>
+            <div className="text-2xl">
               <IoMdCloudDownload />
             </div>
           </Button>
@@ -44,8 +44,8 @@ export default function Home() {
             variant="outline"
             className="flex gap-3 w-1/5 p-6 bg-teal-400"
           >
-            <span className="font-normal text-lg">Contact</span>
-            <div className="text-xl">
+            <span className="font-medium text-lg">Contact</span>
+            <div className="text-2xl">
               <MdEmail />
             </div>
           </Button>
