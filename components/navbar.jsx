@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 export default function navbar() {
   return (
     // Navbar Container
-    <nav className="bg-background border-border border-b drop-shadow-md">
+    <nav className="bg-background border-border border-b drop-shadow-md fixed left-0 right-0 top-0">
       <div className="container pt-4 pb-4 shadow-sm flex justify-between">
         {/* Navbar Name */}
         <Link href="/" className="font-normal hover:text-teal-400 text-2xl">
@@ -40,13 +40,16 @@ export default function navbar() {
         <div className="flex gap-6">
           {/* Mode Toggle */}
           <ModeToggle />
-          <div className="text-2xl text-center content-center border bg-background hover:bg-primary/10 rounded-sm p-1">
-            <Link href="https://github.com/sameer-se">
+          <div className="text-2xl text-center content-center border bg-background hover:bg-primary/10 rounded-md p-1">
+            <Link target="_blank" href="https://github.com/sameer-se">
               <FaGithub />
             </Link>
           </div>
-          <div className="text-2xl text-center content-center border bg-background hover:bg-primary/10 rounded-sm p-1">
-            <Link href="https://www.linkedin.com/in/sameer-khadka-774757222/">
+          <div className="text-2xl text-center content-center border bg-background hover:bg-primary/10 rounded-md p-1">
+            <Link
+              target="_blank"
+              href="https://www.linkedin.com/in/sameer-khadka-774757222/"
+            >
               <FaLinkedin />
             </Link>
           </div>

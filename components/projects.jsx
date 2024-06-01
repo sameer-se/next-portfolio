@@ -10,10 +10,14 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function projects() {
   return (
-    <div id="projects" className="container h-screen">
+    <div
+      id="projects"
+      className="container h-screen flex flex-col justify-evenly"
+    >
       <p className="text-4xl mb-3 text-center font-normal text-teal-400 pt-10">
         PROJECTS:
       </p>
@@ -25,7 +29,7 @@ export default function projects() {
             <CardContent className="border-border">
               <Image
                 className="rounded-lg shadow-md"
-                src="/p1.JPG"
+                src="/p2.png"
                 alt="portfolio website"
                 width={400}
                 height={300}
@@ -38,13 +42,27 @@ export default function projects() {
           </CardHeader>
           {/* Buttons */}
           <div className="flex justify-evenly pb-6 gap-6">
-            <Button className="flex gap-3 p-6">
+            <Button
+              onClick={() => {
+                window.open("https:www.sameer-khadka.com.np", "_blank");
+              }}
+              className="flex gap-3 p-6"
+            >
               <span className="font-medium text-lg">View Project </span>
               <div className="text-2xl">
                 <FaArrowRight />
               </div>
             </Button>
-            <Button variant="outline" className="flex gap-3 p-6 bg-teal-400">
+            <Button
+              onClick={() => {
+                window.open(
+                  "https://github.com/sameer-se/portfolio-website",
+                  "_blank"
+                );
+              }}
+              variant="outline"
+              className="flex gap-3 p-6 bg-teal-400"
+            >
               <span className="font-medium text-lg">Code</span>
               <div className="text-2xl">
                 <FaGithub />
@@ -58,7 +76,7 @@ export default function projects() {
             <CardContent className="border-border">
               <Image
                 className="rounded-lg shadow-md"
-                src="/p2.png"
+                src="/p1.JPG"
                 alt="langing page for VPN"
                 width={400}
                 height={400}
@@ -97,9 +115,9 @@ export default function projects() {
                 height={300}
               ></Image>
             </CardContent>
-            <CardTitle className="pt-6">Portfolio Website</CardTitle>
+            <CardTitle className="pt-6">E-commerce Website</CardTitle>
             <CardDescription>
-              Portfolio website using only HTML, CSS and JavaScript
+              Portfolio website using NextJS, ReactJS, TailwindCSS and MongoDB.
             </CardDescription>
           </CardHeader>
           {/* Buttons */}
