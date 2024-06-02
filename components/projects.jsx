@@ -89,13 +89,27 @@ export default function projects() {
           </CardHeader>
           {/* Buttons */}
           <div className="flex justify-evenly pb-6 gap-6">
-            <Button className="flex gap-3 p-6">
+            <Button
+              onClick={() => {
+                window.open("https://laslesvpn-build.netlify.app/", "_blank");
+              }}
+              className="flex gap-3 p-6"
+            >
               <span className="font-medium text-lg">View Project </span>
               <div className="text-2xl">
                 <FaArrowRight />
               </div>
             </Button>
-            <Button variant="outline" className="flex gap-3 p-6 bg-teal-400">
+            <Button
+              onClick={() => {
+                window.open(
+                  "https://github.com/sameer-se/laslesvpn-website",
+                  "_blank"
+                );
+              }}
+              variant="outline"
+              className="flex gap-3 p-6 bg-teal-400"
+            >
               <span className="font-medium text-lg">Code</span>
               <div className="text-2xl">
                 <FaGithub />
@@ -122,13 +136,30 @@ export default function projects() {
           </CardHeader>
           {/* Buttons */}
           <div className="flex justify-evenly pb-6 gap-6">
-            <Button className="flex gap-3 p-6">
+            <Button
+              onClick={() => {
+                window.open(
+                  "https://next-ecommerce-gamma-three.vercel.app/",
+                  "_blank"
+                );
+              }}
+              className="flex gap-3 p-6"
+            >
               <span className="font-medium text-lg">View Project </span>
               <div className="text-2xl">
                 <FaArrowRight />
               </div>
             </Button>
-            <Button variant="outline" className="flex gap-3 p-6 bg-teal-400">
+            <Button
+              onClick={() => {
+                window.open(
+                  "https://github.com/sameer-se/next-ecommerce ",
+                  "_blank"
+                );
+              }}
+              variant="outline"
+              className="flex gap-3 p-6 bg-teal-400"
+            >
               <span className="font-medium text-lg">Code</span>
               <div className="text-2xl">
                 <FaGithub />
