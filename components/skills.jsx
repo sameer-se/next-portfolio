@@ -18,10 +18,7 @@ import { SiExpress, SiMongodb, SiTypescript, SiGnubash } from "react-icons/si";
 
 export default function Skills() {
   return (
-    <div
-      id="skills"
-      className="container h-screen flex flex-col justify-evenly"
-    >
+    <div id="skills" className="container h-dvh flex flex-col justify-evenly">
       <div>
         <p className="text-4xl mb-3 text-center font-normal text-teal-400">
           SKILLS
