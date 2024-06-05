@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 // Home Component
 export default function Home() {
   return (
-    <div id="home" className="container flex gap-8 justify-between h-dvh">
+    <div id="home" className="container flex gap-8 justify-between h-screen">
       <div className="w-2/3 flex flex-col gap-4 justify-evenly pt-10 pb-16">
         {/* Gretings */}
         <div className="flex flex-col gap-6 pt-14">

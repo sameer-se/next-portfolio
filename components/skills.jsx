@@ -26,24 +26,24 @@ export default function Skills() {
         {/* Icons */}
         <div className="pt-8 text-6xl flex flex-col gap-20">
           {/* Icons First Row */}
-          <div className="flex gap-4 justify-evenly text-teal-300">
-            <IoLogoJavascript />
-            <RiTailwindCssFill />
-            <FaReact />
-            <RiNextjsFill />
-            <SiExpress />
-            <FaNodeJs />
-            <SiMongodb />
+          <div className="flex gap-4 justify-evenly">
+            <IoLogoJavascript className="hover:text-teal-300" />
+            <RiTailwindCssFill className="hover:text-teal-300" />
+            <FaReact className="hover:text-teal-300" />
+            <RiNextjsFill className="hover:text-teal-300" />
+            <SiExpress className="hover:text-teal-300" />
+            <FaNodeJs className="hover:text-teal-300" />
+            <SiMongodb className="hover:text-teal-300" />
           </div>
           {/* Icons Second Row */}
-          <div className="flex gap-4 justify-evenly text-teal-300">
-            <FaRust />
-            <SiTypescript />
-            <FaPython />
-            <FaLinux />
-            <FaDebian />
-            <SiGnubash />
-            <FaGitAlt />
+          <div className="flex gap-4 justify-evenly">
+            <FaRust className="hover:text-teal-300" />
+            <SiTypescript className="hover:text-teal-300" />
+            <FaPython className="hover:text-teal-300" />
+            <FaLinux className="hover:text-teal-300" />
+            <FaDebian className="hover:text-teal-300" />
+            <SiGnubash className="hover:text-teal-300" />
+            <FaGitAlt className="hover:text-teal-300" />
           </div>
         </div>
         {/* services */}
@@ -52,7 +52,7 @@ export default function Skills() {
         </p>
         {/* Boxes */}
         <div className="flex gap-6 mt-4 pt-4">
-          <div className="flex items-center gap-4 hover:scale-105 border-teal-400 border-2 rounded-md p-4 w-1/3">
+          <div className="flex items-center gap-4 border-teal-400 border-2 rounded-md p-4 w-1/3">
             <span className="text-center text-quaternary text-6xl ">
               <CgWebsite />
             </span>
@@ -60,7 +60,7 @@ export default function Skills() {
               Web Development
             </span>
           </div>
-          <div className="flex items-center gap-4 border-2 hover:scale-105 border-teal-400  rounded-md  p-4 w-1/3">
+          <div className="flex items-center gap-4 border-2 border-teal-400  rounded-md  p-4 w-1/3">
             <span className="text-center text-quaternary text-6xl ">
               <FaDatabase />
             </span>
@@ -68,7 +68,7 @@ export default function Skills() {
               Backend Development
             </span>
           </div>
-          <div className="flex items-center gap-4 border-2 border-teal-400 rounded-md hover:scale-105  p-4 w-1/3">
+          <div className="flex items-center gap-4 border-2 border-teal-400 rounded-md  p-4 w-1/3">
             <span className="text-center text-quaternary text-6xl ">
               <FaCode />
             </span>

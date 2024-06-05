@@ -10,18 +10,20 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function projects() {
   return (
-    <div id="projects" className="container h-dvh flex flex-col justify-evenly">
+    <div
+      id="projects"
+      className="container h-dvh min-h-svh flex flex-col justify-evenly"
+    >
       <p className="text-4xl mb-3 text-center font-normal text-teal-400 pt-10">
         PROJECTS:
       </p>
       {/* Cards */}
       <div className="grid grid-cols-3  gap-4 mt-20">
         {/* C1 */}
-        <Card>
+        <Card className="h-full">
           <CardHeader className="grid grid-rows-5">
             <CardContent className="row-span-3 border-border">
               <Image
@@ -33,13 +35,13 @@ export default function projects() {
                 style={{ objectFit: "cover" }}
               ></Image>
             </CardContent>
-            <CardTitle className="row-span-1 pt-6">Portfolio Website</CardTitle>
-            <CardDescription className="row-span-1">
+            <CardTitle className=" pt-6">Portfolio Website</CardTitle>
+            <CardDescription className="">
               Portfolio website using only HTML, CSS and JavaScript
             </CardDescription>
           </CardHeader>
           {/* Buttons */}
-          <div className="row-span-2 flex justify-evenly pb-6 gap-6">
+          <div className="row-span-2 flex justify-evenly gap-6">
             <Button
               onClick={() => {
                 window.open("https:www.sameer-khadka.com.np", "_blank");
