@@ -15,11 +15,11 @@ export default function Page() {
       <Navbar />
       <Home />
       <Separator />
-      <Skills />
-      <Separator />
-      <Projects />
-      <Separator />
-      <Contact />
+      {/* <Skills /> */}
+      {/* <Separator /> */}
+      {/* <Projects /> */}
+      {/* <Separator /> */}
+      {/* <Contact /> */}
       <Footer />
     </>
   );

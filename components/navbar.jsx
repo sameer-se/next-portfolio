@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { ModeToggle } from "./modeToggle";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function navbar() {
   return (
@@ -13,7 +14,7 @@ export default function navbar() {
           <span>SAM33R</span>
         </Link>
         {/* Navbar Linknks */}
-        <div className="flex gap-10">
+        <div className="hidden md:flex gap-6">
           <Link href="#home" className="font-light hover:text-teal-400 text-xl">
             <span>Home</span>
           </Link>
@@ -37,7 +38,7 @@ export default function navbar() {
           </Link>
         </div>
         {/* Icons Links */}
-        <div className="flex gap-6">
+        <div className="flex gap-4 md:gap-6">
           {/* Mode Toggle */}
           <ModeToggle />
           <div className="text-2xl text-center content-center border bg-background hover:bg-primary/10 rounded-md p-1">
@@ -52,6 +53,10 @@ export default function navbar() {
             >
               <FaLinkedin />
             </Link>
+          </div>
+          {/* menu Icon */}
+          <div className="md:hidden text-2xl text-center content-center border bg-background hover:bg-primary/10 rounded-md p-1">
+            <GiHamburgerMenu />
           </div>
         </div>
       </div>
