@@ -18,13 +18,16 @@ import { SiExpress, SiMongodb, SiTypescript, SiGnubash } from "react-icons/si";
 
 export default function Skills() {
   return (
-    <div id="skills" className="container h-dvh flex flex-col justify-evenly">
+    <div
+      id="skills"
+      className="container h-full flex flex-col justify-evenly py-14"
+    >
       <div>
         <p className="text-4xl mb-3 text-center font-normal text-teal-400">
           SKILLS
         </p>
         {/* Icons */}
-        <div className="pt-8 text-6xl flex flex-col gap-20">
+        <div className="pt-8 text-6xl flex flex-col gap-12">
           {/* Icons First Row */}
           <div className="flex gap-4 justify-evenly">
             <IoLogoJavascript className="hover:text-teal-300" />
@@ -47,32 +50,32 @@ export default function Skills() {
           </div>
         </div>
         {/* services */}
-        <p className="text-4xl text-center pt-20 font-normal text-teal-400">
+        <p className="text-4xl text-center pt-16 pb-10 font-normal text-teal-400">
           SERVICES
         </p>
         {/* Boxes */}
-        <div className="flex gap-6 mt-4 pt-4">
-          <div className="flex items-center gap-4 border-teal-400 border-2 rounded-md p-4 w-1/3">
-            <span className="text-center text-quaternary text-6xl ">
+        <div className="flex flex-col gap-6 xl:flex xl:flex-row xl:justify-evenly">
+          <div className="flex items-center gap-4 border-teal-400 border-2 rounded-md p-4 xl:px-10">
+            <span className="text-center text-quaternary text-4xl xl:text-5xl">
               <CgWebsite />
             </span>
-            <span className="text-center text-2xl font-normal break-normal">
+            <span className="text-center text-xl font-normal break-normal xl:text-2xl ">
               Web Development
             </span>
           </div>
-          <div className="flex items-center gap-4 border-2 border-teal-400  rounded-md  p-4 w-1/3">
-            <span className="text-center text-quaternary text-6xl ">
+          <div className="flex items-center gap-4 border-2 border-teal-400  rounded-md  p-4 xl:px-10">
+            <span className="text-center text-quaternary text-4xl xl:text-5xl">
               <FaDatabase />
             </span>
-            <span className="text-center  text-2xl font-normal break-normal">
+            <span className="text-center  text-xl font-normal break-normal xl:text-2xl">
               Backend Development
             </span>
           </div>
-          <div className="flex items-center gap-4 border-2 border-teal-400 rounded-md  p-4 w-1/3">
-            <span className="text-center text-quaternary text-6xl ">
+          <div className="flex items-center gap-4 border-2 border-teal-400 rounded-md  p-4 xl:px-10">
+            <span className="text-center text-quaternary text-4xl xl:text-5xl">
               <FaCode />
             </span>
-            <span className="text-center text-2xl font-normal break-normal">
+            <span className="text-center text-xl font-normal break-normal xl:text-2xl">
               Fullstack Development
             </span>
           </div>

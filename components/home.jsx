@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="container pt-14 h-svh xl:flex gap-6 xl:h-screen xl:pt-20"
+      className="container py-14 h-full xl:flex gap-6 xl:h-screen xl:pt-20"
     >
-      <div className="xl:w-2/3 flex flex-col gap-14 xl:gap-20">
+      <div className="xl:w-2/3 flex flex-col gap-14 xl:gap-16">
         {/* Gretings */}
         <div className="flex flex-col gap-2 pt-14">
           <div className="font-normal text-center text-3xl xl:text-start xl:text-4xl">

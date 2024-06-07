@@ -15,7 +15,7 @@ export default function Page() {
       <Navbar />
       <Home />
       <Separator />
-      {/* <Skills /> */}
+      <Skills />
       {/* <Separator /> */}
       {/* <Projects /> */}
       {/* <Separator /> */}
