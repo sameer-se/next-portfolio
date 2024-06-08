@@ -20,7 +20,7 @@ export default function Skills() {
   return (
     <div
       id="skills"
-      className="container h-full flex flex-col justify-evenly py-14"
+      className="container h-full flex flex-col justify-evenly py-14 lg:py-20"
     >
       <div>
         <p className="text-4xl py-6 text-center font-normal text-teal-400">

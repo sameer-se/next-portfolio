@@ -7,7 +7,7 @@ export default function contact() {
   return (
     <div
       id="contact"
-      className="container h-full flex flex-col gap-4 justify-evenly py-14 lg:py-20 lg:w-2/3 lg:mx-auto xl:h-screen"
+      className="container h-full flex flex-col gap-4 justify-evenly py-14 lg:py-20 lg:w-2/5 lg:mx-auto xl:h-screen"
     >
       <p className="text-4xl text-center font-normal text-teal-400 lg:py-6 ">
         CONTACT
@@ -19,7 +19,7 @@ export default function contact() {
           placeholder="Type your message here."
           className="lg:h-48 mb-10"
         />
-        <Button className="py-6">Send message</Button>
+        <Button className="py-6 lg:text-base">Send message</Button>
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ export default function projects() {
       {/* Cards */}
       <div className="flex flex-col gap-6 xl:flex-row xl:justify-evenly">
         {/* C1 */}
-        <Card className="h-full">
+        <Card>
           <CardHeader className="grid grid-rows-5">
             <CardContent className="row-span-3 border-border">
               <Image
