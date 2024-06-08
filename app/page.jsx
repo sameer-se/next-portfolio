@@ -16,10 +16,10 @@ export default function Page() {
       <Home />
       <Separator />
       <Skills />
-      {/* <Separator /> */}
-      {/* <Projects /> */}
-      {/* <Separator /> */}
-      {/* <Contact /> */}
+      <Separator />
+      <Projects />
+      <Separator />
+      <Contact />
       <Footer />
     </>
   );

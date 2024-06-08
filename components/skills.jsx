@@ -55,7 +55,7 @@ export default function Skills() {
         </p>
         {/* Boxes */}
         <div className="flex flex-col gap-6 xl:flex xl:flex-row xl:justify-evenly">
-          <div className="flex items-center gap-4 border-teal-400 border-2 rounded-md p-4 xl:px-10">
+          <div className="flex items-center justify-center gap-4 border-2 border-teal-400 rounded-md p-4 xl:px-10">
             <span className="text-center text-quaternary text-4xl xl:text-5xl">
               <CgWebsite />
             </span>
@@ -63,7 +63,7 @@ export default function Skills() {
               Web Development
             </span>
           </div>
-          <div className="flex items-center gap-4 border-2 border-teal-400  rounded-md  p-4 xl:px-10">
+          <div className="flex items-center justify-center gap-4 border-2 border-teal-400  rounded-md  p-4 xl:px-10">
             <span className="text-center text-quaternary text-4xl xl:text-5xl">
               <FaDatabase />
             </span>
@@ -71,7 +71,7 @@ export default function Skills() {
               Backend Development
             </span>
           </div>
-          <div className="flex items-center gap-4 border-2 border-teal-400 rounded-md  p-4 xl:px-10">
+          <div className="flex items-center justify-center gap-4 border-2 border-teal-400 rounded-md  p-4 xl:px-10">
             <span className="text-center text-quaternary text-4xl xl:text-5xl">
               <FaCode />
             </span>

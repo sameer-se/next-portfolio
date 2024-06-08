@@ -13,15 +13,12 @@ import Image from "next/image";
 
 export default function projects() {
   return (
-    <div
-      id="projects"
-      className="container h-dvh min-h-svh flex flex-col justify-evenly"
-    >
-      <p className="text-4xl mb-3 text-center font-normal text-teal-400 pt-10">
-        PROJECTS:
+    <div id="projects" className="container py-14">
+      <p className="text-4xl mb-3 text-center font-normal text-teal-400 pb-10">
+        PROJECTS
       </p>
       {/* Cards */}
-      <div className="grid grid-cols-3  gap-4 mt-20">
+      <div className="flex flex-col gap-6 xl:flex-row xl:justify-evenly">
         {/* C1 */}
         <Card className="h-full">
           <CardHeader className="grid grid-rows-5">
@@ -41,15 +38,15 @@ export default function projects() {
             </CardDescription>
           </CardHeader>
           {/* Buttons */}
-          <div className="row-span-2 flex justify-evenly gap-6">
+          <div className="flex flex-row gap-2 py-4 px-4 size-auto justify-center">
             <Button
               onClick={() => {
                 window.open("https:www.sameer-khadka.com.np", "_blank");
               }}
               className="flex gap-3 p-6"
             >
-              <span className="font-medium text-lg">View Project </span>
-              <div className="text-2xl">
+              <span className="font-medium text-base">View Project </span>
+              <div className="text-base">
                 <FaArrowRight />
               </div>
             </Button>
@@ -63,8 +60,8 @@ export default function projects() {
               variant="outline"
               className="flex gap-3 p-6 bg-teal-400"
             >
-              <span className="font-medium text-lg">Code</span>
-              <div className="text-2xl">
+              <span className="font-medium text-base">Code</span>
+              <div className="text-base">
                 <FaGithub />
               </div>
             </Button>
@@ -88,15 +85,15 @@ export default function projects() {
             </CardDescription>
           </CardHeader>
           {/* Buttons */}
-          <div className="flex justify-evenly pb-6 gap-6">
+          <div className="flex flex-row gap-2 py-4 px-4 justify-center">
             <Button
               onClick={() => {
                 window.open("https://laslesvpn-build.netlify.app/", "_blank");
               }}
               className="flex gap-3 p-6"
             >
-              <span className="font-medium text-lg">View Project </span>
-              <div className="text-2xl">
+              <span className="font-medium text-base">View Project </span>
+              <div className="text-base">
                 <FaArrowRight />
               </div>
             </Button>
@@ -110,8 +107,8 @@ export default function projects() {
               variant="outline"
               className="flex gap-3 p-6 bg-teal-400"
             >
-              <span className="font-medium text-lg">Code</span>
-              <div className="text-2xl">
+              <span className="font-medium text-base">Code</span>
+              <div className="text-base">
                 <FaGithub />
               </div>
             </Button>
@@ -135,7 +132,7 @@ export default function projects() {
             </CardDescription>
           </CardHeader>
           {/* Buttons */}
-          <div className="flex justify-evenly pb-6 gap-6">
+          <div className="flex flex-row gap-2 py-4 px-4 justify-center">
             <Button
               onClick={() => {
                 window.open(
@@ -145,8 +142,8 @@ export default function projects() {
               }}
               className="flex gap-3 p-6"
             >
-              <span className="font-medium text-lg">View Project </span>
-              <div className="text-2xl">
+              <span className="font-medium text-base">View Project </span>
+              <div className="text-base">
                 <FaArrowRight />
               </div>
             </Button>
@@ -160,8 +157,8 @@ export default function projects() {
               variant="outline"
               className="flex gap-3 p-6 bg-teal-400"
             >
-              <span className="font-medium text-lg">Code</span>
-              <div className="text-2xl">
+              <span className="font-medium text-base">Code</span>
+              <div className="text-base">
                 <FaGithub />
               </div>
             </Button>
