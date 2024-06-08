@@ -13,7 +13,7 @@ import Image from "next/image";
 
 export default function projects() {
   return (
-    <div id="projects" className="container py-14">
+    <div id="projects" className="container py-14 lg:py-20">
       <p className="text-4xl mb-3 text-center font-normal text-teal-400 pb-10">
         PROJECTS
       </p>

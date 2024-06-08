@@ -23,7 +23,7 @@ export default function Skills() {
       className="container h-full flex flex-col justify-evenly py-14"
     >
       <div>
-        <p className="text-4xl mb-3 text-center font-normal text-teal-400">
+        <p className="text-4xl py-6 text-center font-normal text-teal-400">
           SKILLS
         </p>
         {/* Icons */}

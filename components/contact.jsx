@@ -19,7 +19,7 @@ export default function contact() {
           placeholder="Type your message here."
           className="lg:h-48 mb-10"
         />
-        <Button>Send message</Button>
+        <Button className="py-6">Send message</Button>
       </div>
     </div>
   );
