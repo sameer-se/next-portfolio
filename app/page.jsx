@@ -14,11 +14,11 @@ export default function Page() {
     <>
       <Navbar />
       <Home />
-      <Separator />
+      <Separator className="hidden lg:block" />
       <Skills />
-      <Separator />
+      <Separator className="hidden lg:block" />
       <Projects />
-      <Separator />
+      <Separator className="hidden lg:block" />
       <Contact />
       <Footer />
     </>
