@@ -22,14 +22,14 @@ export default function Home() {
         </div>
         {/* My Informaton */}
         <div className="flex flex-col gap-4 -mt-8">
-          <div className="text-justify break-normal font-normal text-sm xl:text-2xl">
+          <div className="text-justify break-normal font-normal text-base xl:text-2xl">
             FULL STACK DEVELOPER with a passion for creating websites and web
             app with JAVASCRIPT, REACT, NEXTJS, EXPRESS, NODEJS & MONGODB.
           </div>
           {/* Experiance */}
           <div className="flex gap-4 items-center">
-            <p className="font-medium text-teal-400 text-4xl xl:text-8xl">2+</p>
-            <p className="text-justify text-sm font-extralight break-normal xl:text-2xl">
+            <p className="font-medium text-teal-400 text-6xl xl:text-8xl">2+</p>
+            <p className="text-justify text-sm font-light break-normal xl:text-2xl">
               Years of experience. Specialised in building apps, while ensuring
               a seamless web experience for end users.
             </p>
