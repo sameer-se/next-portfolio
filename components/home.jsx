@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="container py-14 h-full xl:flex gap-6 xl:h-screen xl:pt-20"
+      className="container py-14 h-full xl:flex gap-6 xl:h-screen xl:min-h-[720px] xl:max-h-[820px]  xl:pt-20"
     >
       <div className="xl:w-2/3 flex flex-col gap-14 xl:gap-16">
         {/* Gretings */}

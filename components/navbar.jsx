@@ -11,7 +11,7 @@ export default function navbar() {
       <div className="container pt-4 pb-4 shadow-sm flex justify-between">
         {/* Navbar Name */}
         <Link href="/" className="font-normal hover:text-teal-400 text-2xl">
-          <span>SAM33R</span>
+          <span>SAMEER</span>
         </Link>
         {/* Navbar Linknks */}
         <div className="hidden lg:flex gap-10">
