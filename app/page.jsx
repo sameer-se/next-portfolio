@@ -13,13 +13,9 @@ export default function Page() {
   return (
     <>
       <Navbar />
-      <Separator className="hidden lg:block" />
       <Home />
-      <Separator className="hidden lg:block" />
       <Skills />
-      <Separator className="hidden lg:block" />
       <Projects />
-      <Separator className="hidden lg:block" />
       <Contact />
       <Footer />
     </>
