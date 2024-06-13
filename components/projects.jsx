@@ -38,7 +38,7 @@ export default function projects() {
             </CardDescription>
           </CardHeader>
           {/* Buttons */}
-          <div className="flex flex-row gap-2 py-4 px-4 size-auto justify-center">
+          <div className="flex flex-row gap-2 py-4 px-4 size-auto justify-center xl:gap-6">
             <Button
               onClick={() => {
                 window.open("https:www.sameer-khadka.com.np", "_blank");
@@ -85,7 +85,7 @@ export default function projects() {
             </CardDescription>
           </CardHeader>
           {/* Buttons */}
-          <div className="flex flex-row gap-2 py-4 px-4 justify-center">
+          <div className="flex flex-row gap-2 py-4 px-4 justify-center xl:gap-6">
             <Button
               onClick={() => {
                 window.open("https://laslesvpn-build.netlify.app/", "_blank");
@@ -132,7 +132,7 @@ export default function projects() {
             </CardDescription>
           </CardHeader>
           {/* Buttons */}
-          <div className="flex flex-row gap-2 py-4 px-4 justify-center">
+          <div className="flex flex-row gap-2 py-4 px-4 justify-center xl:gap-6">
             <Button
               onClick={() => {
                 window.open(
