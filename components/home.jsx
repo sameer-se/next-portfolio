@@ -1,22 +1,24 @@
 import React from "react";
 import { IoMdCloudDownload } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
-import Spline from "@splinetool/react-spline";
+// import Spline from "@splinetool/react-spline";
 import { Button } from "./ui/button";
+import Image from "next/image";
+
 // Home Component
 export default function Home() {
   return (
     <div
       id="home"
-      className="container py-14 h-full xl:flex gap-6 xl:h-screen xl:min-h-[720px] xl:max-h-[820px]  xl:pt-20"
+      className="container py-14 h-full xl:flex gap-8 xl:h-screen xl:min-h-[720px] xl:max-h-[820px]  xl:pt-20"
     >
-      <div className="xl:w-2/3 flex flex-col gap-14 xl:gap-16">
+      <div className="xl:w-3/5 flex flex-col gap-14 xl:gap-16">
         {/* Gretings */}
         <div className="flex flex-col gap-2 pt-14">
-          <div className="font-normal text-center text-3xl xl:text-start xl:text-4xl">
+          <div className="font-normal text-center text-3xl xl:text-start xl:text-3xl">
             Hello <span>👋🏻 </span>, I am
           </div>
-          <div className="font-semibold text-4xl text-center py-2 text-teal-400 xl:text-start xl:text-8xl">
+          <div className="font-semibold text-4xl text-center py-2 text-teal-400 xl:text-start xl:text-7xl">
             Sameer Khadka
           </div>
         </div>
@@ -64,8 +66,14 @@ export default function Home() {
         </div>
       </div>
       {/* Graphics */}
-      <div className="hidden xl:flex xl:w-1/3 xl:-mt-32">
-        <Spline scene="https://prod.spline.design/gXdLBMKjyjlGr3Jw/scene.splinecode" />
+      <div className="hidden xl:flex xl:w-2/5 xl:justify-center xl:items-center">
+        {/* <Spline scene="https://prod.spline.design/gXdLBMKjyjlGr3Jw/scene.splinecode" /> */}
+        <Image
+          src="/undraw_programming.svg"
+          alt="code"
+          width={600}
+          height={600}
+        ></Image>
       </div>
     </div>
   );
