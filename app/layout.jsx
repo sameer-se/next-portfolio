@@ -12,9 +12,8 @@ const poppins = Poppins({
 export const metadata = {
   title: "Sameer Khadka",
   description: "Full Stack Developer",
-  image: "/code-solid.svg",
   icons: {
-    icon: "/code-solid.svg",
+    icon: "/ghost.svg",
   },
 };
 

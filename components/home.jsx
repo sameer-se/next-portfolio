@@ -10,12 +10,12 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="container py-14 h-full xl:flex gap-8 xl:h-screen xl:min-h-[720px] xl:max-h-[820px]  xl:pt-20"
+      className="container py-14 h-full xl:flex gap-10 xl:h-screen xl:min-h-[720px] xl:max-h-[820px]  xl:pt-20"
     >
       <div className="xl:w-3/5 flex flex-col gap-14 xl:gap-16">
         {/* Gretings */}
         <div className="flex flex-col gap-2 pt-14">
-          <div className="font-normal text-center text-3xl xl:text-start xl:text-3xl">
+          <div className="font-normal text-center text-3xl xl:text-start xl:text-4xl">
             Hello <span>👋🏻 </span>, I am
           </div>
           <div className="font-semibold text-4xl text-center py-2 text-teal-400 xl:text-start xl:text-7xl">
@@ -24,14 +24,14 @@ export default function Home() {
         </div>
         {/* My Informaton */}
         <div className="flex flex-col gap-4 -mt-8">
-          <div className="text-justify break-normal font-normal text-base xl:text-2xl">
+          <div className="text-justify break-normal font-light text-base xl:text-2xl">
             FULL STACK DEVELOPER with a passion for creating websites and web
             app with JAVASCRIPT, REACT, NEXTJS, EXPRESS, NODEJS & MONGODB.
           </div>
           {/* Experiance */}
           <div className="flex gap-4 items-center">
             <p className="font-medium text-teal-400 text-6xl xl:text-8xl">2+</p>
-            <p className="text-justify text-sm font-light break-normal xl:text-2xl">
+            <p className="text-justify text-sm font-extralight break-normal xl:text-2xl">
               Years of experience. Specialised in building apps, while ensuring
               a seamless web experience for end users.
             </p>
