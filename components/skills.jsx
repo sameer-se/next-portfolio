@@ -27,7 +27,7 @@ export default function Skills() {
           SKILLS
         </p>
         {/* Icons */}
-        <div className="pt-8 text-6xl flex flex-col gap-12">
+        <div className="pt-8 text-6xl flex flex-col gap-16">
           {/* Icons First Row */}
           <div className="flex gap-4 justify-evenly">
             <IoLogoJavascript className="hover:text-teal-300" />
