@@ -41,7 +41,7 @@ export default function Home() {
         <div className="flex gap-4 justify-center xl:justify-start">
           <Button
             onClick={() => {
-              window.open("/Sameer_khadka_Resume.pdf", "_blank");
+              window.open("/Sameer_Khadka_Resume.pdf", "_blank");
             }}
             className="flex gap-3 py-6 px-4"
           >
