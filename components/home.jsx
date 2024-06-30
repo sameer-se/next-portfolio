@@ -68,12 +68,7 @@ export default function Home() {
       {/* Graphics */}
       <div className="hidden xl:flex xl:w-2/5 xl:justify-center xl:items-center">
         {/* <Spline scene="https://prod.spline.design/gXdLBMKjyjlGr3Jw/scene.splinecode" /> */}
-        <Image
-          src="/undraw_programming.svg"
-          alt="code"
-          width={600}
-          height={600}
-        ></Image>
+        <Image src="/cd.svg" alt="code" width={600} height={700}></Image>
       </div>
     </div>
   );

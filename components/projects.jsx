@@ -75,7 +75,7 @@ export default function projects() {
                 className="rounded-lg shadow-md"
                 width={400}
                 height={300}
-                src="/p1.JPG"
+                src="/p1.png"
                 alt="langing page for VPN"
               ></Image>
             </CardContent>

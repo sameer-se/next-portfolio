@@ -55,7 +55,7 @@ export default function navbar() {
             </Link>
           </div>
           {/* menu Icon */}
-          <div className="md:hidden text-2xl text-center content-center border bg-background hover:bg-primary/10 rounded-md p-1">
+          <div className="hidden text-2xl text-center content-center border bg-background hover:bg-primary/10 rounded-md p-1">
             <GiHamburgerMenu />
           </div>
         </div>

@@ -12,6 +12,7 @@ export default function contact() {
       <p className="text-4xl text-center font-normal text-teal-400 lg:py-6 ">
         CONTACT
       </p>
+
       <Input placeholder="Name" className="lg:h-14" />
       <Input type="email" placeholder="Email" className="lg:h-14" />
       <div className="grid w-full gap-2">
@@ -19,7 +20,14 @@ export default function contact() {
           placeholder="Type your message here."
           className="lg:h-48 mb-10"
         />
-        <Button className="py-6 lg:text-base">Send message</Button>
+        <Button
+          className="py-6 lg:text-base"
+          onClick={() => {
+            alert("Message sent successfully");
+          }}
+        >
+          Send message
+        </Button>
       </div>
     </div>
   );
