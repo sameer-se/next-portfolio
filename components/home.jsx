@@ -45,7 +45,7 @@ export default function Home() {
           </p>
           <div className="flex items-center gap-6 bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
             <p className="font-bold text-teal-400 text-6xl lg:text-8xl">2+</p>
-            <p className="text-sm lg:text-xl font-light">
+            <p className="text-sm text-justify lg:text-xl font-light">
               Years of experience. Specialised in building apps, while ensuring
               a seamless web experience for end users.
             </p>
