@@ -64,7 +64,7 @@ export default function Navbar() {
             icon={<FaLinkedin />}
           />
           <button
-            className="lg:hidden text-2xl hover:text-teal-400 transition-colors"
+            className="lg:hidden text-2xl text-center content-center border bg-background hover:bg-primary/10 rounded-md p-1 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <HiX /> : <HiMenu />}
@@ -103,7 +103,7 @@ function SocialIcon({ href, icon }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-2xl hover:text-teal-400 transition-colors"
+      className="text-2xl text-center content-center border bg-background hover:bg-primary/10 rounded-md p-1 transition-colors"
     >
       {icon}
     </Link>

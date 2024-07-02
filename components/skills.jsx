@@ -73,7 +73,7 @@ export default function Skills() {
         initial={{ y: -50 }}
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 120 }}
-        className="text-4xl md:text-5xl py-6 text-center font-bold text-teal-400 mb-12"
+        className="text-4xl md:text-5xl text-center font-bold text-teal-400 mb-12"
       >
         SKILLS
       </motion.h2>

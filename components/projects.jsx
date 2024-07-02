@@ -17,41 +17,68 @@ const ProjectCard = ({ title, description, imageSrc, projectUrl, codeUrl }) => {
     <motion.div
       whileHover={{ y: -5 }}
       transition={{ type: "spring", stiffness: 300 }}
+      className="h-full"
     >
-      <Card className="h-full flex flex-col justify-between overflow-hidden group">
-        <div>
+      <Card className="flex flex-col h-full overflow-hidden group">
+        <div className="flex-grow">
           <CardHeader className="p-0">
-            <div className="relative w-full h-48 overflow-hidden">
-              <Image
-                className="absolute inset-0 w-full h-full transition-transform duration-300 group-hover:scale-110"
+            <div className="relative w-full aspect-video overflow-hidden">
+              {/* <Image
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 src={imageSrc}
                 alt={title}
                 layout="fill"
-                objectFit="fit"
+                objectFit="cover"
+              /> */}
+              <Image
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                src={imageSrc}
+                alt={title}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <Separator />
-            <div className="p-6">
-              <CardTitle className="text-2xl mb-2">{title}</CardTitle>
-              <CardDescription className="text-sm">
+            <div className="p-4 sm:p-6">
+              <CardTitle className="text-xl sm:text-2xl mb-2">
+                {title}
+              </CardTitle>
+              <CardDescription className="text-xs sm:text-sm">
                 {description}
               </CardDescription>
             </div>
           </CardHeader>
         </div>
-        <CardContent className="p-6 pt-0 mt-auto">
-          <div className="flex flex-row gap-4 justify-center">
+        <CardContent className="p-4 sm:p-6 mt-auto">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+            {/* View Product Button */}
+            {/* <Button
+              onClick={() => window.open(projectUrl, "_blank")}
+              className="flex-1 gap-2 text-xs sm:text-sm"
+            >
+              <span>View Project</span>
+              <FaArrowRight />
+            </Button> */}
             <Button
               onClick={() => window.open(projectUrl, "_blank")}
-              className="flex-1 gap-2"
+              className="flex-1 gap-2 text-xs sm:text-sm"
+              aria-label={`View ${title} project`}
             >
               <span>View Project</span>
               <FaArrowRight />
             </Button>
-            <Button
+            {/* Github Button */}
+            {/* <Button
               onClick={() => window.open(codeUrl, "_blank")}
               variant="outline"
-              className="flex-1 gap-2 bg-teal-400 hover:bg-teal-500"
+              className="flex-1 gap-2 bg-teal-400 hover:bg-teal-500 text-xs sm:text-sm"
+            >
+              <span>Code</span>
+              <FaGithub />
+            </Button> */}
+            <Button
+              onClick={() => window.open(codeUrl, "_blank")}
+              className="flex-1 gap-2 bg-teal-400 hover:bg-teal-500 text-xs sm:text-sm"
             >
               <span>Code</span>
               <FaGithub />
@@ -62,14 +89,13 @@ const ProjectCard = ({ title, description, imageSrc, projectUrl, codeUrl }) => {
     </motion.div>
   );
 };
-
 const Projects = () => {
   const projects = [
     {
       title: "Portfolio Website",
       description: "Portfolio website using only HTML, CSS and JavaScript",
       imageSrc: "/p2.png",
-      projectUrl: "https://www.sameer-khadka.com.np",
+      projectUrl: "https://sameer-se.netlify.app/",
       codeUrl: "https://github.com/sameer-se/portfolio-website",
     },
     {
@@ -95,24 +121,23 @@ const Projects = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       id="projects"
-      className="container py-20"
+      className="container py-10 sm:py-20"
     >
       <motion.h2
         initial={{ y: -50 }}
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 120 }}
-        className="text-4xl md:text-5xl mb-12 text-center font-bold text-teal-400"
+        className="text-3xl sm:text-4xl md:text-5xl mb-8 sm:mb-12 text-center font-bold text-teal-400"
       >
         PROJECTS
       </motion.h2>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 xl:grid-cols-3">
         {projects.map((project, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2 }}
-            className="flex"
           >
             <ProjectCard {...project} />
           </motion.div>

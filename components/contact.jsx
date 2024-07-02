@@ -48,30 +48,30 @@ export default function Contact() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2 }}
         onSubmit={handleSubmit}
-        className="flex flex-col gap-6 bg-gray-100 dark:bg-gray-800 p-8 rounded-lg shadow-lg"
+        className="flex flex-col gap-6 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg"
       >
         <Input
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="h-12 rounded-md"
+          className="h-12 rounded-md bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
         />
         <Input
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="h-12 rounded-md"
+          className="h-12 rounded-md bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
         />
         <Textarea
           placeholder="Type your message here."
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="h-36 rounded-md"
+          className="h-36 rounded-md bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
         />
         <Button
           type="submit"
-          className="py-4 text-base font-semibold bg-teal-500 hover:bg-teal-600 transition-colors duration-300"
+          className="py-4 text-base font-semibold bg-teal-500 hover:bg-teal-600 text-white transition-colors duration-300"
           disabled={isSubmitting}
         >
           {isSubmitting ? (
