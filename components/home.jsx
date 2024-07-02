@@ -24,7 +24,7 @@ export default function Home() {
           <h2 className="font-normal text-center text-3xl lg:text-start lg:text-4xl">
             Hello <span className="animate-wave inline-block">👋🏻</span>, I am
           </h2>
-          <h1 className="font-bold text-4xl text-center py-2 text-teal-400 lg:text-start lg:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">
+          <h1 className="font-bold text-4xl text-center py-2 text-teal-400 lg:text-start lg:text-6xl xl:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500 lg:-mb-10">
             Sameer Khadka
           </h1>
         </motion.div>

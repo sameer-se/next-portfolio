@@ -3,25 +3,52 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const poppins = Poppins({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-poppins",
 });
 
 export const metadata = {
-  title: "Sameer Khadka",
-  description: "Full Stack Developer",
+  metadataBase: new URL("https://sameer-khadka.com.np"),
+  title: "Sameer Khadka | Full Stack Developer",
+  description:
+    "Experienced Full Stack Developer specializing in modern web technologies. View my projects and skills.",
+  keywords: "Full Stack Developer, Web Development, JavaScript, React, Node.js",
+  author: "Sameer Khadka",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://sameer-khadka.com.np",
+    site_name: "Sameer Khadka Portfolio",
+    images: [
+      {
+        url: "/ghost.svg",
+        width: 1200,
+        height: 630,
+        alt: "Sameer Khadka - Full Stack Developer",
+      },
+    ],
+  },
+  twitter: {
+    handle: "@SameerKhadkax28",
+    site: "@SameerKhadkax28",
+    cardType: "summary_large_image",
+  },
   icons: {
     icon: "/ghost.svg",
+    apple: "/apple-touch-icon.png",
+    favicon: "/favicon.ico",
   },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html className="bg-secondary" lang="en">
-      <body className={poppins.className}>
-        {" "}
+    <html
+      lang="en"
+      className={`${poppins.variable} bg-secondary scroll-smooth`}
+    >
+      <body className="font-sans antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

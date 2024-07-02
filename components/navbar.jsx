@@ -7,11 +7,26 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
+
+      const sections = ["home", "skills", "projects", "contact"];
+      const current = sections.find((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      });
+
+      if (current) {
+        setActiveSection(current);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -41,35 +56,42 @@ export default function Navbar() {
           href="/"
           className="font-semibold text-2xl text-teal-400 hover:text-teal-500 transition-colors"
         >
-          SAMEER
+          sameer.se
         </Link>
-
-        <div className="hidden lg:flex gap-8 items-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="hidden lg:flex gap-8 items-center"
+        >
           {navItems.map((item) => (
-            <Link
+            <NavItem
               key={item.name}
-              href={item.href}
-              className="font-medium text-lg hover:text-teal-400 transition-colors"
-            >
-              {item.name}
-            </Link>
+              {...item}
+              isActive={activeSection === item.href.slice(1)}
+            />
           ))}
-        </div>
+        </motion.div>
 
-        <div className="flex gap-4 items-center">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="flex gap-3 items-center"
+        >
           <ModeToggle />
           <SocialIcon href="https://github.com/sameer-se" icon={<FaGithub />} />
           <SocialIcon
             href="https://www.linkedin.com/in/sameer-khadka-774757222/"
             icon={<FaLinkedin />}
           />
-          <button
+          <motion.button
             className="lg:hidden text-2xl text-center content-center border bg-background hover:bg-primary/10 rounded-md p-1 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <HiX /> : <HiMenu />}
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       </div>
 
       <AnimatePresence>
@@ -78,17 +100,17 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
             className="lg:hidden bg-background border-t border-border"
           >
             {navItems.map((item) => (
-              <Link
+              <NavItem
                 key={item.name}
-                href={item.href}
-                className="block py-3 px-4 font-medium text-lg hover:bg-primary/10 hover:text-teal-400 transition-colors"
+                {...item}
+                isActive={activeSection === item.href.slice(1)}
                 onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </Link>
+                isMobile
+              />
             ))}
           </motion.div>
         )}
@@ -97,15 +119,38 @@ export default function Navbar() {
   );
 }
 
-function SocialIcon({ href, icon }) {
+function NavItem({ name, href, isActive, onClick, isMobile }) {
   return (
     <Link
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-2xl text-center content-center border bg-background hover:bg-primary/10 rounded-md p-1 transition-colors"
+      className={`relative font-medium text-lg transition-colors ${
+        isMobile ? "block py-3 px-4 hover:bg-primary/10" : ""
+      } ${isActive ? "text-teal-400" : "hover:text-teal-400"}`}
+      onClick={onClick}
     >
-      {icon}
+      {name}
+      {isActive && !isMobile && (
+        <motion.div
+          layoutId="activeSection"
+          className="absolute -bottom-1 left-0 right-0 h-0.5 bg-teal-400"
+          transition={{ type: "spring", stiffness: 380, damping: 30 }}
+        />
+      )}
     </Link>
+  );
+}
+
+function SocialIcon({ href, icon }) {
+  return (
+    <motion.div className="flex items-center justify-center">
+      <Link
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-2xl text-center content-center border bg-background hover:bg-primary/10 rounded-md p-1 transition-colors duration-300"
+      >
+        {icon}
+      </Link>
+    </motion.div>
   );
 }

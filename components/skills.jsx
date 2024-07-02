@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { IoLogoJavascript } from "react-icons/io5";
 import { CgWebsite } from "react-icons/cg";
 import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
@@ -14,7 +14,7 @@ import {
   FaCode,
 } from "react-icons/fa";
 import { SiExpress, SiMongodb, SiTypescript, SiGnubash } from "react-icons/si";
-import { motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const SkillIcon = ({ Icon, name }) => (
   <motion.div
@@ -36,6 +36,37 @@ const ServiceBox = ({ Icon, title }) => (
     <span className="text-center text-lg lg:text-xl font-medium">{title}</span>
   </motion.div>
 );
+
+const AnimatedSection = ({ children, className }) => {
+  const controls = useAnimation();
+  const ref = React.useRef(null);
+  const inView = useInView(ref, { once: true, threshold: 0.1 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  return (
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5, staggerChildren: 0.1 },
+        },
+      }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 export default function Skills() {
   const skillIcons = [
@@ -62,56 +93,49 @@ export default function Skills() {
   ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
+    <div
       id="skills"
       className="container min-h-screen flex flex-col justify-center py-20"
     >
-      <motion.h2
-        initial={{ y: -50 }}
-        animate={{ y: 0 }}
-        transition={{ type: "spring", stiffness: 120 }}
-        className="text-4xl md:text-5xl text-center font-bold text-teal-400 mb-12"
-      >
-        SKILLS
-      </motion.h2>
+      <AnimatedSection>
+        <h2 className="text-4xl md:text-5xl text-center font-bold text-teal-400 mb-12">
+          SKILLS
+        </h2>
+      </AnimatedSection>
 
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-8 mb-20">
+      <AnimatedSection className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-8 mb-20">
         {skillIcons.map((skill, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
           >
             <SkillIcon Icon={skill.Icon} name={skill.name} />
           </motion.div>
         ))}
-      </div>
+      </AnimatedSection>
 
-      <motion.h2
-        initial={{ y: -50 }}
-        animate={{ y: 0 }}
-        transition={{ type: "spring", stiffness: 120 }}
-        className="text-4xl md:text-5xl text-center font-bold text-teal-400 mb-12"
-      >
-        SERVICES
-      </motion.h2>
+      <AnimatedSection>
+        <h2 className="text-4xl md:text-5xl text-center font-bold text-teal-400 mb-12">
+          SERVICES
+        </h2>
+      </AnimatedSection>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <AnimatedSection className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.2 }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
           >
             <ServiceBox Icon={service.Icon} title={service.title} />
           </motion.div>
         ))}
-      </div>
-    </motion.div>
+      </AnimatedSection>
+    </div>
   );
 }

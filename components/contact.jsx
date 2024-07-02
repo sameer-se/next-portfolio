@@ -1,9 +1,41 @@
-import React, { useState } from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 import { FaPaperPlane } from "react-icons/fa";
+
+const AnimatedSection = ({ children, className }) => {
+  const controls = useAnimation();
+  const ref = React.useRef(null);
+  const inView = useInView(ref, { once: true, threshold: 0.1 });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  return (
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5, staggerChildren: 0.1 },
+        },
+      }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -28,70 +60,92 @@ export default function Contact() {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      id="contact"
-      className="container py-20 max-w-xl mx-auto"
-    >
-      <motion.h2
-        initial={{ y: -50 }}
-        animate={{ y: 0 }}
-        transition={{ type: "spring", stiffness: 120 }}
-        className="text-4xl md:text-5xl mb-12 text-center font-bold text-teal-400"
-      >
-        CONTACT
-      </motion.h2>
-      <motion.form
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.2 }}
-        onSubmit={handleSubmit}
-        className="flex flex-col gap-6 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg"
-      >
-        <Input
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="h-12 rounded-md bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
-        />
-        <Input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="h-12 rounded-md bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
-        />
-        <Textarea
-          placeholder="Type your message here."
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-          className="h-36 rounded-md bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
-        />
-        <Button
-          type="submit"
-          className="py-4 text-base font-semibold bg-teal-500 hover:bg-teal-600 text-white transition-colors duration-300"
-          disabled={isSubmitting}
+    <div id="contact" className="container py-20 max-w-xl mx-auto">
+      <AnimatedSection>
+        <h2 className="text-4xl md:text-5xl mb-12 text-center font-bold text-teal-400">
+          CONTACT
+        </h2>
+      </AnimatedSection>
+      <AnimatedSection>
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-6 bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg"
         >
-          {isSubmitting ? (
-            <span className="flex items-center justify-center">
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                className="mr-2"
-              >
-                <FaPaperPlane />
-              </motion.div>
-              Sending...
-            </span>
-          ) : (
-            <span className="flex items-center justify-center">
-              <FaPaperPlane className="mr-2" /> Send Message
-            </span>
-          )}
-        </Button>
-      </motion.form>
-    </motion.div>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <Input
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="h-12 rounded-md bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+            />
+          </motion.div>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <Input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="h-12 rounded-md bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+            />
+          </motion.div>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <Textarea
+              placeholder="Type your message here."
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className="h-36 rounded-md bg-gray-100 dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+            />
+          </motion.div>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <Button
+              type="submit"
+              className="w-full py-4 text-base font-semibold bg-teal-500 hover:bg-teal-600 text-white transition-colors duration-300"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? (
+                <span className="flex items-center justify-center">
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{
+                      duration: 1,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
+                    className="mr-2"
+                  >
+                    <FaPaperPlane />
+                  </motion.div>
+                  Sending...
+                </span>
+              ) : (
+                <span className="flex items-center justify-center">
+                  <FaPaperPlane className="mr-2" /> Send Message
+                </span>
+              )}
+            </Button>
+          </motion.div>
+        </form>
+      </AnimatedSection>
+    </div>
   );
 }
