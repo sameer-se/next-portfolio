@@ -19,7 +19,7 @@
     "@vercel/speed-insights": "^1.0.11",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.2.6",
+    "framer-motion": "^11.2.12",
     "next": "14.2.2",
     "next-themes": "^0.3.0",
     "react": "^18",

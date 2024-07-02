@@ -5,166 +5,121 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
-export default function projects() {
+const ProjectCard = ({ title, description, imageSrc, projectUrl, codeUrl }) => {
   return (
-    <div id="projects" className="container py-14 lg:py-20">
-      <p className="text-4xl mb-3 text-center font-normal text-teal-400 pb-10">
-        PROJECTS
-      </p>
-      {/* Cards */}
-      <div className="flex flex-col gap-6 xl:flex-row xl:justify-evenly">
-        {/* C1 */}
-        <Card className="lg:w-1/3">
-          <CardHeader className="grid grid-rows-5">
-            <CardContent className="row-span-3 border-border">
+    <motion.div
+      whileHover={{ y: -5 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      <Card className="h-full flex flex-col justify-between overflow-hidden group">
+        <div>
+          <CardHeader className="p-0">
+            <div className="relative w-full h-48 overflow-hidden">
               <Image
-                className="rounded-lg shadow-md"
-                src="/p2.png"
-                alt="portfolio website"
-                width={400}
-                height={300}
-                style={{ objectFit: "cover" }}
-              ></Image>
-            </CardContent>
-            <CardTitle className=" pt-6">Portfolio Website</CardTitle>
-            <CardDescription className="">
-              Portfolio website using only HTML, CSS and JavaScript
-            </CardDescription>
+                className="absolute inset-0 w-full h-full transition-transform duration-300 group-hover:scale-110"
+                src={imageSrc}
+                alt={title}
+                layout="fill"
+                objectFit="fit"
+              />
+            </div>
+            <Separator />
+            <div className="p-6">
+              <CardTitle className="text-2xl mb-2">{title}</CardTitle>
+              <CardDescription className="text-sm">
+                {description}
+              </CardDescription>
+            </div>
           </CardHeader>
-          {/* Buttons */}
-          <div className="flex flex-row gap-2 py-4 px-4 size-auto justify-center xl:gap-6">
+        </div>
+        <CardContent className="p-6 pt-0 mt-auto">
+          <div className="flex flex-row gap-4 justify-center">
             <Button
-              onClick={() => {
-                window.open("https:www.sameer-khadka.com.np", "_blank");
-              }}
-              className="flex gap-3 p-6"
+              onClick={() => window.open(projectUrl, "_blank")}
+              className="flex-1 gap-2"
             >
-              <span className="font-medium text-base">View Project </span>
-              <div className="text-base">
-                <FaArrowRight />
-              </div>
+              <span>View Project</span>
+              <FaArrowRight />
             </Button>
             <Button
-              onClick={() => {
-                window.open(
-                  "https://github.com/sameer-se/portfolio-website",
-                  "_blank"
-                );
-              }}
+              onClick={() => window.open(codeUrl, "_blank")}
               variant="outline"
-              className="flex gap-3 p-6 bg-teal-400"
+              className="flex-1 gap-2 bg-teal-400 hover:bg-teal-500"
             >
-              <span className="font-medium text-base">Code</span>
-              <div className="text-base">
-                <FaGithub />
-              </div>
+              <span>Code</span>
+              <FaGithub />
             </Button>
           </div>
-        </Card>
-        {/* C2 */}
-        <Card className="lg:w-1/3">
-          <CardHeader className="grid grid-rows-5">
-            <CardContent className="row-span-3 border-border">
-              <Image
-                className="rounded-lg shadow-md"
-                width={400}
-                height={300}
-                src="/p1.png"
-                alt="langing page for VPN"
-              ></Image>
-            </CardContent>
-            <CardTitle className="row-span-1 pt-6">Home Page For VPN</CardTitle>
-            <CardDescription className="row-span-1">
-              Portfolio website using only HTML, CSS and JavaScript
-            </CardDescription>
-          </CardHeader>
-          {/* Buttons */}
-          <div className="flex flex-row gap-2 py-4 px-4 justify-center xl:gap-6">
-            <Button
-              onClick={() => {
-                window.open("https://laslesvpn-build.netlify.app/", "_blank");
-              }}
-              className="flex gap-3 p-6"
-            >
-              <span className="font-medium text-base">View Project </span>
-              <div className="text-base">
-                <FaArrowRight />
-              </div>
-            </Button>
-            <Button
-              onClick={() => {
-                window.open(
-                  "https://github.com/sameer-se/laslesvpn-website",
-                  "_blank"
-                );
-              }}
-              variant="outline"
-              className="flex gap-3 p-6 bg-teal-400"
-            >
-              <span className="font-medium text-base">Code</span>
-              <div className="text-base">
-                <FaGithub />
-              </div>
-            </Button>
-          </div>
-        </Card>
-        {/* C3 */}
-        <Card className="lg:w-1/3">
-          <CardHeader className="">
-            <CardContent className="border-border shadow-md">
-              <Image
-                className="rounded-lg"
-                src="/p3.png"
-                alt=""
-                width={400}
-                height={300}
-              ></Image>
-            </CardContent>
-            <CardTitle className="pt-6">E-commerce Website</CardTitle>
-            <CardDescription>
-              Portfolio website using NextJS, ReactJS, TailwindCSS and MongoDB.
-            </CardDescription>
-          </CardHeader>
-          {/* Buttons */}
-          <div className="flex flex-row gap-2 py-4 px-4 justify-center xl:gap-6">
-            <Button
-              onClick={() => {
-                window.open(
-                  "https://next-ecommerce-gamma-three.vercel.app/",
-                  "_blank"
-                );
-              }}
-              className="flex gap-3 p-6"
-            >
-              <span className="font-medium text-base">View Project </span>
-              <div className="text-base">
-                <FaArrowRight />
-              </div>
-            </Button>
-            <Button
-              onClick={() => {
-                window.open(
-                  "https://github.com/sameer-se/next-ecommerce ",
-                  "_blank"
-                );
-              }}
-              variant="outline"
-              className="flex gap-3 p-6 bg-teal-400"
-            >
-              <span className="font-medium text-base">Code</span>
-              <div className="text-base">
-                <FaGithub />
-              </div>
-            </Button>
-          </div>
-        </Card>
-      </div>
-    </div>
+        </CardContent>
+      </Card>
+    </motion.div>
   );
-}
+};
+
+const Projects = () => {
+  const projects = [
+    {
+      title: "Portfolio Website",
+      description: "Portfolio website using only HTML, CSS and JavaScript",
+      imageSrc: "/p2.png",
+      projectUrl: "https://www.sameer-khadka.com.np",
+      codeUrl: "https://github.com/sameer-se/portfolio-website",
+    },
+    {
+      title: "Home Page For VPN",
+      description: "Landing page for VPN using HTML, CSS and JavaScript",
+      imageSrc: "/p1.png",
+      projectUrl: "https://laslesvpn-build.netlify.app/",
+      codeUrl: "https://github.com/sameer-se/laslesvpn-website",
+    },
+    {
+      title: "E-commerce Website",
+      description:
+        "E-commerce website using NextJS, ReactJS, TailwindCSS and MongoDB",
+      imageSrc: "/p3.png",
+      projectUrl: "https://next-ecommerce-gamma-three.vercel.app/",
+      codeUrl: "https://github.com/sameer-se/next-ecommerce",
+    },
+  ];
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      id="projects"
+      className="container py-20"
+    >
+      <motion.h2
+        initial={{ y: -50 }}
+        animate={{ y: 0 }}
+        transition={{ type: "spring", stiffness: 120 }}
+        className="text-4xl md:text-5xl mb-12 text-center font-bold text-teal-400"
+      >
+        PROJECTS
+      </motion.h2>
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+        {projects.map((project, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.2 }}
+            className="flex"
+          >
+            <ProjectCard {...project} />
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
+  );
+};
+
+export default Projects;
