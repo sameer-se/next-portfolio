@@ -51,14 +51,6 @@ export default function Footer() {
         >
           © {currentYear} Sameer Khadka. All rights reserved.
         </motion.p>
-        <motion.p
-          className="text-center font-light text-xs md:text-sm mt-2 text-gray-500 dark:text-gray-400"
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.3 }}
-        >
-          Made with <FaHeart className="inline text-red-500" /> in Nepal
-        </motion.p>
       </div>
     </motion.footer>
   );
