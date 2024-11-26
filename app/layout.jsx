@@ -12,6 +12,7 @@ const poppins = Poppins({
 export const metadata = {
   metadataBase: new URL("https://sameer-khadka.com.np"),
   title: "Sameer Khadka | Full Stack Developer",
+  site_name: "Sameer Khadka",
   description:
     "Experienced Full Stack Developer specializing in modern web technologies. View my projects and skills.",
   keywords: "Full Stack Developer, Web Development, JavaScript, React, Node.js",
