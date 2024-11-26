@@ -59,7 +59,7 @@ export default function Home() {
           className="flex gap-4 justify-center lg:justify-start"
         >
           <Button
-            onClick={() => window.open("/Sameer_Khadka_Resume.pdf", "_blank")}
+            onClick={() => window.open("/SameerKhadkaCV.pdf", "_blank")}
             className="flex gap-3 py-6 px-6 bg-teal-500 hover:bg-teal-600 transition-colors duration-300"
           >
             <span className="font-medium text-lg">Download CV</span>

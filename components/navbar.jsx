@@ -82,7 +82,7 @@ export default function Navbar() {
           <ModeToggle />
           <SocialIcon href="https://github.com/sameer-se" icon={<FaGithub />} />
           <SocialIcon
-            href="https://www.linkedin.com/in/sameer-khadka-774757222/"
+            href="https://www.linkedin.com/in/sameer-khadka2008/"
             icon={<FaLinkedin />}
           />
           <motion.button

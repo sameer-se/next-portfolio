@@ -9,7 +9,7 @@ export default function Footer() {
     { icon: FaGithub, href: "https://github.com/sameer-se", label: "GitHub" },
     {
       icon: FaLinkedin,
-      href: "https://www.linkedin.com/in/sameer-khadka-774757222/",
+      href: "https://www.linkedin.com/in/sameer-khadka2008/",
       label: "LinkedIn",
     },
     {
