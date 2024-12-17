@@ -23,7 +23,7 @@ export const metadata = {
     site_name: "Sameer Khadka Portfolio",
     images: [
       {
-        url: "/ghost.svg",
+        url: "/alien.svg",
         width: 1200,
         height: 630,
         alt: "Sameer Khadka - Full Stack Developer",
@@ -36,7 +36,7 @@ export const metadata = {
     cardType: "summary_large_image",
   },
   icons: {
-    icon: "/ghost.svg",
+    icon: "/alien.svg",
     apple: "/apple-touch-icon.png",
     favicon: "/favicon.ico",
   },
