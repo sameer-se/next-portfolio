@@ -49,7 +49,9 @@ export default function Contact() {
       setIsSubmitting(true);
       // Simulating an API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
-      alert("Message sent successfully");
+      alert(
+        "Failed to send message. Please contact through email or linkedin."
+      );
       setName("");
       setEmail("");
       setMessage("");
