@@ -2,7 +2,6 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { ModeToggle } from "./modeToggle";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { DiTerminal } from "react-icons/di";
 import { HiMenu, HiX } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -57,7 +56,6 @@ export default function Navbar() {
           href="/"
           className="flex font-honk font-semibold text-3xl text-teal-400 hover:text-teal-500 transition-colors"
         >
-          <DiTerminal className="text-4xl self-center" />
           sameer-se
         </Link>
         <motion.div
