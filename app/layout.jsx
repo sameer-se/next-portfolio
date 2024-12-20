@@ -8,6 +8,7 @@ const poppins = Poppins({
   display: "swap",
   variable: "--font-poppins",
 });
+
 <meta property="og:site_name" content="Sameer Khadka"></meta>;
 export const metadata = {
   metadataBase: new URL("https://sameer-khadka.com.np"),
