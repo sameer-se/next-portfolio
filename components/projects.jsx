@@ -127,7 +127,7 @@ const Projects = () => {
   return (
     <div id="projects" className="container py-10 sm:py-20">
       <AnimatedSection>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl mb-8 sm:mb-12 text-center font-bold text-teal-400">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl mb-8 sm:mb-14 mt-8 text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-600 transition-colors">
           PROJECTS
         </h2>
       </AnimatedSection>

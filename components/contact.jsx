@@ -64,7 +64,7 @@ export default function Contact() {
   return (
     <div id="contact" className="container py-20 max-w-xl mx-auto">
       <AnimatedSection>
-        <h2 className="text-4xl md:text-5xl mb-12 text-center font-bold text-teal-400">
+        <h2 className="text-4xl md:text-5xl mb-12 mt-8 text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-600 transition-colors">
           CONTACT
         </h2>
       </AnimatedSection>

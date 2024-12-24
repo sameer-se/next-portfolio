@@ -98,12 +98,12 @@ export default function Skills() {
       className="container min-h-screen flex flex-col justify-center py-20"
     >
       <AnimatedSection>
-        <h2 className="text-4xl md:text-5xl text-center font-bold text-teal-400 mb-12">
-          SKILLS
+        <h2 className="text-4xl md:text-5xl text-center font-bold mb-24 text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-600 transition-colors">
+          SKILLS & SERVICES
         </h2>
       </AnimatedSection>
 
-      <AnimatedSection className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-8 mb-20">
+      <AnimatedSection className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-20 mb-20">
         {skillIcons.map((skill, index) => (
           <motion.div
             key={index}
@@ -118,9 +118,9 @@ export default function Skills() {
       </AnimatedSection>
 
       <AnimatedSection>
-        <h2 className="text-4xl md:text-5xl text-center font-bold text-teal-400 mb-12">
+        {/* <h2 className="text-4xl md:text-5xl text-center font-bold text-teal-400 mb-12">
           SERVICES
-        </h2>
+        </h2> */}
       </AnimatedSection>
 
       <AnimatedSection className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
