@@ -54,7 +54,7 @@ export default function Navbar() {
       <div className="container py-4 flex justify-between items-center mx-auto">
         <Link
           href="/"
-          className="font-honk font-semibold sm:text-3xl text-lg text-teal-400 hover:text-teal-500 transition-colors"
+          className="font-semibold sm:text-2xl text-lg text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-600 transition-colors"
         >
           sameer-se
         </Link>
