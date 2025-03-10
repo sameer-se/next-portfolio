@@ -77,7 +77,7 @@ export default function Navbar() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="flex gap-3 items-center"
+          className="flex gap-3 items-center text-teal-400"
         >
           <ModeToggle />
           <SocialIcon href="https://github.com/sameer-se" icon={<FaGithub />} />
