@@ -9,37 +9,44 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-<meta property="og:site_name" content="Sameer Khadka"></meta>;
 export const metadata = {
   metadataBase: new URL("https://sameer-khadka.com.np"),
-  title: "Sameer Khadka | Full Stack Developer",
+  title: {
+    default: "Sameer Khadka | Software Developer",
+    template: "%s | Sameer Khadka",
+  },
   description:
-    "Experienced Full Stack Developer specializing in modern web technologies. View my projects and skills.",
-  keywords: "Full Stack Developer, Web Development, JavaScript, React, Node.js",
-  author: "Sameer Khadka",
+    "Personal portfolio of Sameer Khadka, a Software Developer and Fullstack Engineer based in Nepal.",
+  keywords: [
+    "Sameer Khadka",
+    "Software Developer",
+    "Software Engineer",
+    "Web Developer",
+    "Fullstack Engineer",
+    "Fullstack Developer",
+    "Nepal",
+    "React",
+    "Next.js",
+  ],
+  authors: [{ name: "Sameer Khadka" }],
+  creator: "Sameer Khadka",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://sameer-khadka.com.np",
-    site_name: "Sameer Khadka Portfolio",
-    images: [
-      {
-        url: "/alien.svg",
-        width: 1200,
-        height: 630,
-        alt: "Sameer Khadka - Full Stack Developer",
-      },
-    ],
+    title: "Sameer Khadka | Software Developer",
+    description:
+      "Personal portfolio of Sameer Khadka, a Software Developer and Fullstack Engineer based in Nepal.",
+    siteName: "Sameer Khadka Portfolio",
   },
   twitter: {
-    handle: "@SameerKhadkax28",
-    site: "@SameerKhadkax28",
-    cardType: "summary_large_image",
+    card: "summary_large_image",
+    title: "Sameer Khadka | Software Developer",
+    description:
+      "Personal portfolio of Sameer Khadka, a Software Developer and Fullstack Engineer based in Nepal.",
   },
   icons: {
     icon: "/alien.svg",
-    apple: "/apple-touch-icon.png",
-    favicon: "/favicon.ico",
   },
 };
 

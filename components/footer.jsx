@@ -1,57 +1,52 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { FaHeart, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { Github, Linkedin, Mail } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
-  const socialLinks = [
-    { icon: FaGithub, href: "https://github.com/sameer-se", label: "GitHub" },
-    {
-      icon: FaLinkedin,
-      href: "https://www.linkedin.com/in/sameer-khadka2008/",
-      label: "LinkedIn",
-    },
-    {
-      icon: FaEnvelope,
-      href: "mailto:sameerkhadka2008@gmail.com",
-      label: "Email",
-    },
-  ];
-
   return (
-    <motion.footer
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="bg-gray-100 dark:bg-gray-800 border-t-2 border-teal-400 py-8 px-4"
-    >
-      <div className="container mx-auto flex flex-col items-center">
-        <div className="flex space-x-6 mb-4">
-          {socialLinks.map((link, index) => (
-            <motion.a
-              key={index}
-              href={link.href}
+    <footer className="border-t py-8">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="mb-4 md:mb-0">
+            <p className="text-sm text-muted-foreground">
+              &copy; {new Date().getFullYear()} Sameer Khadka. All rights
+              reserved.
+            </p>
+          </div>
+
+          <div className="flex space-x-4">
+            <Link
+              href="https://github.com/sameer-se"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ y: -3 }}
-              whileTap={{ scale: 0.95 }}
-              className="text-gray-600 dark:text-gray-300 hover:text-teal-400 transition-colors duration-300"
-              aria-label={link.label}
+              aria-label="GitHub"
+              className="text-muted-foreground hover:text-foreground transition-colors text-teal-500"
             >
-              <link.icon className="text-2xl" />
-            </motion.a>
-          ))}
+              <Github className="h-5 w-5" />
+              <span className="sr-only">GitHub</span>
+            </Link>
+
+            <Link
+              href="https://www.linkedin.com/in/sameer-khadka2008/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="text-muted-foreground hover:text-foreground transition-colors text-teal-500"
+            >
+              <Linkedin className="h-5 w-5" />
+              <span className="sr-only">LinkedIn</span>
+            </Link>
+
+            <Link
+              href="mailto:sameerkhadka2008@gmail.com"
+              aria-label="Email"
+              className="text-muted-foreground hover:text-foreground transition-colors text-teal-500"
+            >
+              <Mail className="h-5 w-5" />
+              <span className="sr-only">Email</span>
+            </Link>
+          </div>
         </div>
-        <motion.p
-          className="text-center font-light text-sm md:text-base text-gray-600 dark:text-gray-300"
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
-          © {currentYear} Sameer Khadka. All rights reserved.
-        </motion.p>
       </div>
-    </motion.footer>
+    </footer>
   );
 }
